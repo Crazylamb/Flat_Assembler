@@ -1,5 +1,5 @@
-;ввести массив, получить массив В элементов A, значение которых не совпадает с введённым числом x
-;5 вариант
+;Р’РІРµСЃС‚Рё РјР°СЃСЃРёРІ, РїРѕР»СѓС‡РёС‚СЊ РјР°СЃСЃРёРІ Р’ СЌР»РµРјРµРЅС‚РѕРІ Рђ, Р·РЅР°С‡РµРЅРёСЏ РєРѕС‚РѕСЂС‹С… РЅРµ СЃРѕРІРїР°РґР°СЋС‚ СЃ РІРІРµРґРµРЅРЅС‹Рј РҐ
+;5 Р’Р°СЂРёР°РЅС‚ 
 Format PE Console
 
 entry start
@@ -47,6 +47,7 @@ section '.code' readable executable
 
 
 ;---------------------
+;РџРѕР»СѓС‡РµРЅРёРµ РјР°СЃСЃРёРІР° Рђ
 proc        Make_Array
                 push strArrayLength
                 call[printf]
@@ -92,6 +93,7 @@ proc        Make_Array
 endp
 
 ;---------------------
+;РЎРѕР·РґР°РЅРёРµ РњР°СЃСЃРёРІР° Р’
 proc        Make_B
                 push strXValue
                 call[printf]
@@ -117,7 +119,7 @@ proc        Make_B
                         add edx, 4
                         add ecx, 4
                         jmp getArrayBLoop
-
+;РЎР»СѓС‡Р°Р№ РєРѕРіРґР° РЅРµ РЅСѓР¶РµРЅ СЌР»РµРјРµРЅС‚
         incNum:
         add edx, 4
         jmp getArrayBLoop
@@ -126,7 +128,7 @@ proc        Make_B
                 ret
 endp
 ;-------------------------------------------------
-
+;РџРµС‡Р°С‚СЊ РјР°СЃСЃРёРІР° Р’
 proc       PrintArrayB
                 push newLine
                 call [printf]
@@ -163,6 +165,7 @@ proc       PrintArrayB
                 ret
  endp
 ;-------------------------------------------------
+;РџРµС‡Р°С‚СЊ РјР°СЃСЃРёРІР° Рђ
 proc       PrintArrayA
                 push newLine
                 call [printf]
